@@ -149,9 +149,9 @@ header {
 
 	&__item {
 
-		width: 300px;
+		width: 299px;
 		height: 315px;
-		margin-top: 20px;
+		margin: 20px 0 40px 0;
 		display: inline-block;
 		overflow: hidden;
 		position: relative;
@@ -159,7 +159,7 @@ header {
 		cursor: pointer;
 
 		&:not(:last-child) {
-			margin-right: 16px;
+			margin-right: 17px;
 		}
 
 		&:hover {
@@ -232,6 +232,106 @@ header {
 			font-family: RobotoLight;
 		}
 	}
+}
+
+.features {
+
+	text-align: center;
+	
+	.title {
+		font-size: 30px;
+		font-family: RobotoLight;
+		color: @color-gray-dark;
+		position: relative;
+		margin-bottom: 30px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 197px;
+			height: 2px;
+			background: @color-green-light;
+		}
+	}
+
+	.definition {
+		font-size: 14px;
+		font-family: RobotoLight;
+		color: @color-gray-dark;
+		margin-bottom: 30px;
+	}
+
+	.steps {
+
+		& > img {
+			vertical-align: top;
+			position: relative;
+			top: 50px;
+		}
+
+		.steps__item {
+			width: 185px;
+			height: 215px;
+			position: relative;
+			display: inline-block;
+
+			&:nth-of-type(1) {
+				background: url(../img/icon-tractor.png) top no-repeat;
+
+				img {
+					right: 20px; 
+				}
+			}
+
+			&:nth-of-type(2) {
+				background: url(../img/icon-document.png) top no-repeat;
+
+				img {
+					right: 45px; 
+				}
+			}
+
+			&:nth-of-type(3) {
+				background: url(../img/icon-handshake.png) top no-repeat;
+
+				img {
+					right: 35px; 
+				}
+			}
+
+			&:nth-of-type(4) {
+				background: url(../img/icon-vehicle.png) top no-repeat;
+
+				img {
+					right: 15px; 
+				}
+			}
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+
+			img {
+				position: absolute;
+				top: 80px;
+			}
+
+			span {
+				font-size: 14px;
+				font-family: RobotoLight;
+				color: @color-gray-dark;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+		
 }
 
 
