@@ -2,6 +2,7 @@
 @color-green-medium: #519d49;
 @color-green-dark: #438041;
 @color-green-dark-opacity: rgba(43, 81, 51, 0.8);
+@color-gray-lighter: #f6f6f6;
 @color-gray-light: #f3f3f3;
 @color-gray-medium: #e6e6e6;
 @color-gray-dark: #323232;
@@ -15,6 +16,11 @@
 @font-face {
 	font-family: RobotoBold;
 	src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+	font-family: RobotoThinItalic;
+	src: url(../fonts/Roboto-ThinItalic.ttf);
 }
 
 html,body {
@@ -36,6 +42,22 @@ a, button, input, select {
 
 a {
 	text-decoration: none;
+}
+
+button {
+	margin: 0 auto 30px auto;
+	background: @color-green-light;
+	padding: 10px 30px;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: RobotoBold;
+	color: @color-white;
+	-webkit-font-smoothing: antialiased;
+
+	&:hover {
+		background: @color-green-medium;
+	}
 } 
 
 header, footer, .main {
@@ -53,7 +75,7 @@ header, footer, .main {
 
 header {
 
-	padding-bottom: 5px;
+	padding-bottom: 7px;
 
 	.logo {
 		float: left;
@@ -81,7 +103,7 @@ header {
 	.phones {
 		float: right;
 		margin: 3px 0 0 25px;
-		width: 140px;
+		width: 141px;
 		font-family: RobotoBold;
 		font-size: 18px;
 		color: @color-gray-dark;
@@ -330,8 +352,196 @@ header {
 			}
 		}
 	}
-
 		
+}
+
+.specials {
+	padding-top: 30px;
+	margin-bottom: 30px;
+
+	.news {
+		float: left;
+		width: 490px;
+
+		li {
+			padding: 10px 0;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid @color-gray-medium;
+			}
+		}
+
+		.title {
+			font-size: 30px;
+			font-family: RobotoLight;
+			color: @color-gray-dark;
+			display: inline-block;
+			border-bottom: 2px solid @color-green-medium;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+		}
+
+		.date {
+			font-size: 12px;
+			font-family: RobotoThinItalic;
+			color: @color-green-light;
+		}
+
+		.title-news {
+			font-size: 14px;
+			font-family: RobotoBold;
+			color: @color-gray-dark;
+		}
+
+		.text {
+			font-size: 13px;
+			font-family: RobotoLight;
+			color: @color-gray-dark;
+		}
+
+		a.continue {
+			font-size: 13px;
+			font-family: RobotoLight;
+			color: @color-green-light;
+			border-bottom: 1px solid @color-green-light;
+			float: right;
+			margin-top: 5px;
+			cursor: pointer;
+
+			&:hover {
+				color: @color-green-dark;
+				border-bottom: 1px solid @color-green-dark;
+			}
+		}
+	}
+
+	.calculator {
+		float: right;
+		width: 385px;
+		height: 435px;
+		background: @color-gray-light;
+		border: 1px solid @color-gray-medium;
+		padding: 15px 0;
+		text-align: center;
+
+		.title {
+			font-size: 30px;
+			font-family: RobotoLight;
+			color: @color-gray-dark;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50px;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				width: 197px;
+				height: 2px;
+				background: @color-green-light;
+			}
+		}
+	}
+}
+
+.partners {
+	background: @color-gray-lighter;
+	text-align: center;
+	padding-top: 20px;
+
+	.title {
+		font-size: 30px;
+		font-family: RobotoLight;
+		color: @color-gray-dark;
+		position: relative;
+		margin-bottom: 30px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 180px;
+			height: 2px;
+			background: @color-green-light;
+		}
+	}
+
+	.description {
+		font-size: 14px;
+		font-family: RobotoLight;
+		color: @color-gray-dark;
+		margin-bottom: 30px;
+	}
+
+	img {
+		margin-bottom: 45px;
+	}
+
+	img:not(:last-of-type) {
+		margin-right: 45px;
+	}
+}
+
+footer {
+
+	padding: 10px 0;
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 80px;
+	}
+
+	ul {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 15px;
+
+		a {
+			font-size: 12px;
+			font-family: RobotoLight;
+			color: @color-green-light;
+			text-transform: uppercase;
+			display: block;
+			border-bottom: 1px solid @color-green-light;
+
+			&:hover {
+				color: @color-green-dark;
+				border-bottom: 1px solid @color-green-dark;
+			}
+		}
+	}
+
+	.phones {
+		float: right;
+		margin: 3px 0 0 25px;
+		width: 141px;
+		font-family: RobotoBold;
+		font-size: 18px;
+		color: @color-gray-dark;
+		display: inline-block;
+		vertical-align: middle;
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	.credits {
+		font-size: 9px;
+		font-family: RobotoLight;
+		color: @color-gray-medium;
+		float: right;
+		margin: 5px 0;
+	}
 }
 
 
