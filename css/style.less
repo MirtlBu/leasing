@@ -1,6 +1,7 @@
 @color-green-light: #5bb04f;
 @color-green-medium: #519d49;
 @color-green-dark: #438041;
+@color-green-dark-opacity: rgba(43, 81, 51, 0.8);
 @color-gray-light: #f3f3f3;
 @color-gray-medium: #e6e6e6;
 @color-gray-dark: #323232;
@@ -128,6 +129,107 @@ header {
 				background: @color-green-dark;
 				padding: 5px 15px 5px 13px;
 			}
+		}
+	}
+}
+
+.slides {
+
+	&__item:nth-child(1) {
+		background: url(../img/tractor.jpg);
+	}
+
+	&__item:nth-child(2) {
+		background: url(../img/facilities.jpg);
+	}
+
+	&__item:nth-child(3) {
+		background: url(../img/machine.jpg);
+	}
+
+	&__item {
+
+		width: 300px;
+		height: 315px;
+		margin-top: 20px;
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+
+		&:hover {
+			.panel {
+				bottom: 0;
+			}
+		}
+	}
+
+	.panel {
+		text-align: left;
+		background: @color-green-dark-opacity;
+		color: @color-white;
+		padding: 10px 14px;
+		position: absolute;
+		bottom: -125px;
+		left: 0;
+		transition: bottom 0.5s ease;
+	}
+
+	.header {
+
+		span:first-child {
+			font-size: 13px;
+			font-family: RobotoLight;
+			text-transform: uppercase;
+		}
+
+		span:last-child {
+			font-size: 17px;
+			font-family: RobotoBold;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 60px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 90%;
+			height: 1px;
+			background: rgba(255, 255, 255, 0.2)
+		}
+
+		&:after {
+			content: '';
+			width: 100%;
+			display: inline-block;
+			clear: both;
+		}
+		
+	}
+
+	li {
+
+		margin-bottom: 10px;
+
+		img, span {
+			vertical-align: middle;
+		}
+
+		span:first-of-type {
+			font-size: 14px;
+			font-family: RobotoBold;
+		}
+
+		span:last-of-type {
+			font-size: 14px;
+			font-family: RobotoLight;
 		}
 	}
 }
