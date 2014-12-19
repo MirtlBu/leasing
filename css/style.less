@@ -6,6 +6,7 @@
 @color-gray-light: #f3f3f3;
 @color-gray-medium: #e6e6e6;
 @color-gray-dark: #323232;
+@color-gray-calc: #d0d0d0;
 @color-white: #ffffff;
 
 @font-face {
@@ -155,7 +156,17 @@ header {
 	}
 }
 
+.navigation.sticky {
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 0;
+	z-index: 10;
+}
+
 .slides {
+	position: relative;
 
 	&__item:nth-child(1) {
 		background: url(../img/tractor.jpg);
@@ -254,6 +265,10 @@ header {
 			font-family: RobotoLight;
 		}
 	}
+}
+
+.debounce {
+	margin-top: 35px;
 }
 
 .features {
@@ -429,6 +444,7 @@ header {
 			font-family: RobotoLight;
 			color: @color-gray-dark;
 			position: relative;
+			margin-bottom: 35px;
 
 			&:after {
 				content: '';
@@ -441,6 +457,22 @@ header {
 				height: 2px;
 				background: @color-green-light;
 			}
+		}
+
+		span {
+			float: left;
+			font-size: 14px;
+			font-family: RobotoLight;
+			color: @color-gray-calc;
+		}
+
+		button {
+			float: right;
+		}
+
+		.calc {
+			width: 315px;
+			margin: 0 auto;
 		}
 	}
 }
@@ -538,11 +570,13 @@ footer {
 	.credits {
 		font-size: 9px;
 		font-family: RobotoLight;
-		color: @color-gray-medium;
+		color: @color-gray-calc;
 		float: right;
 		margin: 5px 0;
 	}
 }
+
+
 
 
 
