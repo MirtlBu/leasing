@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/fancy-select.css">
 	<meta content="text/html; charset=utf-8; ru" http-equiv="Content-Type">
 	<title>Leasing</title>
 </head>
@@ -175,6 +176,42 @@
 				<div class="calculator">
 					<img src="img/icon-calc.png">
 					<div class="title">Онлайн калькулятор</div>
+					<select class="select1">
+						<option value="">Выберите категорию</option>
+						<option>Категория 1</option>
+						<option>Категория 2</option>
+						<option>Категория 3</option>
+						<option>Категория 4</option>
+						<option>Категория 5</option>
+					</select>
+					<select class="select2">
+						<option value="">Выберите категорию</option>
+						<option>Категория 1</option>
+						<option>Категория 2</option>
+						<option>Категория 3</option>
+						<option>Категория 4</option>
+						<option>Категория 5</option>
+					</select>
+					<select class="select3">
+						<option value="">Выберите категорию</option>
+						<option>Категория 1</option>
+						<option>Категория 2</option>
+						<option>Категория 3</option>
+						<option>Категория 4</option>
+						<option>Категория 5</option>
+					</select>
+					<select class="select4">
+						<option value="">Выберите категорию</option>
+						<option>Категория 1</option>
+						<option>Категория 2</option>
+						<option>Категория 3</option>
+						<option>Категория 4</option>
+						<option>Категория 5</option>
+					</select>
+					<div class="calc">
+						<span>* все поля обязательны<br> для заполнения</span>
+						<button>Посчитать</button>
+					</div>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -220,7 +257,14 @@
 	</footer>
 
 	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/fancy-select.js"></script>
 	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		$('.select1').fancySelect();
+		$('.select2').fancySelect();
+		$('.select3').fancySelect();
+		$('.select4').fancySelect();
+	</script>
 </body>
 </html>
 
