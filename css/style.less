@@ -481,6 +481,19 @@ header {
 	background: @color-gray-lighter;
 	text-align: center;
 	padding-top: 20px;
+	position: relative;
+
+	// &:after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	top: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	background: rgba(0, 0, 0, 0.5)
+	// }
 
 	.title {
 		font-size: 30px;
@@ -511,6 +524,20 @@ header {
 
 	img {
 		margin-bottom: 45px;
+		opacity: .5;
+		filter: alpha(opacity=40);
+		-webkit-filter: grayscale(100%) contrast(0%);
+		   -moz-filter: grayscale(100%) contrast(0%);
+		        filter: grayscale(100%) contrast(0%);
+		        filter: gray;
+		        filter: url(filters.svg#grayscale);
+		&:hover {
+			-webkit-filter: grayscale(0%) contrast(100%);
+		   -moz-filter: grayscale(0%) contrast(100%);
+		        filter: grayscale(0%) contrast(100%);
+		        filter: none;
+		        filter: url(filters.svg#grayscale);
+		}        
 	}
 
 	img:not(:last-of-type) {
